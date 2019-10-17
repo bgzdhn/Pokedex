@@ -4,31 +4,41 @@
 <meta charset="UTF-8">
 <title>Pokedex</title>
 <script
-			  src="https://code.jquery.com/jquery-3.4.1.js"
-			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-			  crossorigin="anonymous"></script>
+	src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
 </head>
 <body>
 
+<!--First Pokemon search-->
 <h2>Search for pokemon by name or #</h2>
 <input type="text" id="poke"></input>
 <button id="btn">Search</button>
 
 <h2 id="name"></h2>
 <p id="num"></p>
-<p id="xp"></p>
-<p id="height"></p>
+<div id="img"></div>
 <p id="weight"></p>
+<p id="type"></p>
 
+<button id="fav_btn">Add to favourites</button>
+
+<!--Second Pokemon search-->
 <h2>Search for pokemon by name or #</h2>
 <input type="text" id="poke2"></input>
 <button id="btn2">Search</button>
 
 <h2 id="name2"></h2>
 <p id="num2"></p>
-<p id="xp2"></p>
-<p id="height2"></p>
-<p id="weight2"></p>
+<div id="img2"></div>
+<p id="type2"></p>
+
+<!--Favourite section-->
+<div id="favourites">
+	<h2>Favourites:</h2>
+	<p id="message"></p>
+	<ul id="pokemon_favs"></ul>
+</div>
 
 <script src="script.js"></script> 
 </body>
