@@ -2,6 +2,7 @@
 var elbutton = document.getElementById("btn");
 var elbutton2 = document.getElementById("btn2");
 var elFav = document.getElementById("fav_btn");
+var elShow = document.getElementById("show_pokemon");
 
 //cache first search elements
 var elH2 = document.getElementById("name");
@@ -18,6 +19,10 @@ var elType2 = document.getElementById("type2");
 //cache favourites elements
 var elPokeFavs = document.getElementById("pokemon_favs");
 var elMessage = document.getElementById("message");
+
+//cache all pokemon list elements
+var elAllPokemon = document.getElementById("all_pokemon");
+var elMessage2 = document.getElementById("message2");
 
 elbutton.addEventListener("click", function(){	//first search event listener
 	//cache api info
@@ -96,9 +101,22 @@ elFav.addEventListener("click",function(){	//favourites event listener
 			elMessage.innerHTML = pokeInfo.addMessage();
 			$("#message").show();
 			$("#message").fadeOut(1000);
-		}
-		$("li").click(function(){
+			
+			$("li").click(function(){
   			$(this).fadeOut("slow");
   		});
+		}
+		
 	});
 });
+
+elShow.addEventListener("click", function(){	//all pokemon event listener
+	elMessage2.innerHTML = "This may take a few seconds...";
+	$(elMessage2).fadeOut(1000);
+
+	$.getJSON("https://pokeapi.co/api/v2/pokemon?limit=807", function(data){
+		for (var i = 0; i < data.results.length; i++){
+			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+		}
+	});
+}); 
