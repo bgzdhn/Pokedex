@@ -30,6 +30,13 @@ ul > li{
     display:inline-block;
 }
 
+#pokemon-box{
+  width:200px;
+  height:100px;
+  padding:20px;
+  display:inline-block;
+}
+
 /* For mobile phones: */
 [class*="col-"] {
   width: 100%;
