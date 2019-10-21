@@ -18,7 +18,7 @@ html{
 }
 
 body{
-	background-color: #ff3333;
+	background-color: #b3b3b3;
 }
 
 li{
@@ -36,6 +36,34 @@ ul > li{
   padding:20px;
   display:inline-block;
 }
+
+button {
+  box-shadow:inset 0px 39px 0px -24px #e67a73;
+  background:linear-gradient(to bottom, #e04c41 5%, #ff524c 100%);
+  background-color:#e04c41;
+  border-radius:4px;
+  border: 0px solid #ffffff;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:monospace;
+  font-size:15px;
+  padding:6px 15px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #b23e35;
+  margin: 2px;
+}
+
+button:hover {
+  background:linear-gradient(to bottom, #ff524c 5%, #e04c41 100%);
+  background-color:#ff524c;
+}
+
+button:active {
+  position:relative;
+  top:1px;
+}
+
 
 /* For mobile phones: */
 [class*="col-"] {
