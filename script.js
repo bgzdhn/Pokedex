@@ -2,7 +2,15 @@
 var elbutton = document.getElementById("btn");
 var elbutton2 = document.getElementById("btn2");
 var elFav = document.getElementById("fav_btn");
-var elShow = document.getElementById("show_pokemon");
+
+//cache show all pokemon buttons
+var elShow1 = document.getElementById("show_pokemon1");
+var elShow2 = document.getElementById("show_pokemon2");
+var elShow3 = document.getElementById("show_pokemon3");
+var elShow4 = document.getElementById("show_pokemon4");
+var elShow5 = document.getElementById("show_pokemon5");
+var elShow6 = document.getElementById("show_pokemon6");
+var elShow7 = document.getElementById("show_pokemon7");
 
 //cache first search elements
 var elH2 = document.getElementById("name");
@@ -22,7 +30,6 @@ var elMessage = document.getElementById("message");
 
 //cache all pokemon list elements
 var elAllPokemon = document.getElementById("all_pokemon");
-var elMessage2 = document.getElementById("message2");
 
 elbutton.addEventListener("click", function(){	//first search event listener
 	//cache api info
@@ -110,13 +117,88 @@ elFav.addEventListener("click",function(){	//favourites event listener
 	});
 });
 
-elShow.addEventListener("click", function(){	//all pokemon event listener
-	elMessage2.innerHTML = "This may take a few seconds...";
-	$(elMessage2).fadeOut(1000);
-
+//show all pokemon event listeners
+elShow1.addEventListener("click", function(){	//all pokemon gen 1 event listener
 	$.getJSON("https://pokeapi.co/api/v2/pokemon?limit=807", function(data){
-		for (var i = 0; i < data.results.length; i++){
+		if(elAllPokemon){
+			elAllPokemon.innerHTML = "";
+		}
+
+		for (var i = 0; i < 151; i++){
 			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
 		}
 	});
 }); 
+
+elShow2.addEventListener("click", function(){	//all pokemon gen 2 event listener
+	$.getJSON("https://pokeapi.co/api/v2/pokemon?limit=807", function(data){
+		if(elAllPokemon){
+			elAllPokemon.innerHTML = "";
+		}
+
+		for (var i = 151; i < 251; i++){
+			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+		}
+	});
+}); 
+
+elShow3.addEventListener("click", function(){	//all pokemon gen 3 event listener
+	$.getJSON("https://pokeapi.co/api/v2/pokemon?limit=807", function(data){
+		if(elAllPokemon){
+			elAllPokemon.innerHTML = "";
+		}
+
+		for (var i = 251; i < 386; i++){
+			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+		}
+	});
+}); 
+
+elShow4.addEventListener("click", function(){	//all pokemon gen 4 event listener
+	$.getJSON("https://pokeapi.co/api/v2/pokemon?limit=807", function(data){
+		if(elAllPokemon){
+			elAllPokemon.innerHTML = "";
+		}
+
+		for (var i = 386; i < 493; i++){
+			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+		}
+	});
+}); 
+
+elShow5.addEventListener("click", function(){	//all pokemon gen 4 event listener
+	$.getJSON("https://pokeapi.co/api/v2/pokemon?limit=807", function(data){
+		if(elAllPokemon){
+			elAllPokemon.innerHTML = "";
+		}
+
+		for (var i = 493; i < 649; i++){
+			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+		}
+	});
+}); 
+
+elShow6.addEventListener("click", function(){	//all pokemon gen 4 event listener
+	$.getJSON("https://pokeapi.co/api/v2/pokemon?limit=807", function(data){
+		if(elAllPokemon){
+			elAllPokemon.innerHTML = "";
+		}
+
+		for (var i = 649; i < 721; i++){
+			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+		}
+	});
+});
+
+elShow7.addEventListener("click", function(){	//all pokemon gen 4 event listener
+	$.getJSON("https://pokeapi.co/api/v2/pokemon?limit=807", function(data){
+		if(elAllPokemon){
+			elAllPokemon.innerHTML = "";
+		}
+
+		for (var i = 721; i < 811; i++){
+			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+		}
+	});
+});
+
