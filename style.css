@@ -30,11 +30,16 @@ ul > li{
     display:inline-block;
 }
 
+#pokemon_favs{
+    display:inline-block;
+}
+
 #pokemon-box{
   width:200px;
   height:100px;
   padding:20px;
   display:inline-block;
+  margin: 2px;
 }
 
 button {

@@ -125,7 +125,7 @@ elShow1.addEventListener("click", function(){	//all pokemon gen 1 event listener
 		}
 
 		for (var i = 0; i < 151; i++){
-			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+			elAllPokemon.innerHTML += "<p id='pokemon-box'>" + data.results[i].name + "</p>";
 		}
 	});
 }); 
@@ -137,7 +137,7 @@ elShow2.addEventListener("click", function(){	//all pokemon gen 2 event listener
 		}
 
 		for (var i = 151; i < 251; i++){
-			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+			elAllPokemon.innerHTML += "<p id='pokemon-box'>" + data.results[i].name + "</p>";
 		}
 	});
 }); 
@@ -149,7 +149,7 @@ elShow3.addEventListener("click", function(){	//all pokemon gen 3 event listener
 		}
 
 		for (var i = 251; i < 386; i++){
-			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+			elAllPokemon.innerHTML += "<p id='pokemon-box'>" + data.results[i].name + "</p>";
 		}
 	});
 }); 
@@ -161,43 +161,43 @@ elShow4.addEventListener("click", function(){	//all pokemon gen 4 event listener
 		}
 
 		for (var i = 386; i < 493; i++){
-			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+			elAllPokemon.innerHTML += "<p id='pokemon-box'>" + data.results[i].name + "</p>";
 		}
 	});
 }); 
 
-elShow5.addEventListener("click", function(){	//all pokemon gen 4 event listener
+elShow5.addEventListener("click", function(){	//all pokemon gen 5 event listener
 	$.getJSON("https://pokeapi.co/api/v2/pokemon?limit=807", function(data){
 		if(elAllPokemon){
 			elAllPokemon.innerHTML = "";
 		}
 
 		for (var i = 493; i < 649; i++){
-			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+			elAllPokemon.innerHTML += "<p id='pokemon-box'>" + data.results[i].name + "</p>";
 		}
 	});
 }); 
 
-elShow6.addEventListener("click", function(){	//all pokemon gen 4 event listener
+elShow6.addEventListener("click", function(){	//all pokemon gen 6 event listener
 	$.getJSON("https://pokeapi.co/api/v2/pokemon?limit=807", function(data){
 		if(elAllPokemon){
 			elAllPokemon.innerHTML = "";
 		}
 
 		for (var i = 649; i < 721; i++){
-			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+			elAllPokemon.innerHTML += "<p id='pokemon-box'>" + data.results[i].name + "</p>";
 		}
 	});
 });
 
-elShow7.addEventListener("click", function(){	//all pokemon gen 4 event listener
+elShow7.addEventListener("click", function(){	//all pokemon gen 7 event listener
 	$.getJSON("https://pokeapi.co/api/v2/pokemon?limit=807", function(data){
 		if(elAllPokemon){
 			elAllPokemon.innerHTML = "";
 		}
 
 		for (var i = 721; i < 811; i++){
-			elAllPokemon.innerHTML += "<li id='pokemon-box'>" + data.results[i].name + "</li>";
+			elAllPokemon.innerHTML += "<p id='pokemon-box'>" + data.results[i].name + "</p>";
 		}
 	});
 });
